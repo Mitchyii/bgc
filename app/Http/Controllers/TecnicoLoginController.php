@@ -29,7 +29,7 @@ class TecnicoLoginController extends Controller
         // Verificar se as credenciais são válidas com o guard 'tecnico'
         if (Auth::guard('tecnico')->attempt($credentials)) {
             // Redireciona para o dashboard após o login bem-sucedido
-            return redirect()->intended('/calendario');
+            return view('admin.calendar');
         } else {
             // Caso as credenciais sejam inválidas, retorna um erro
             return back()->withErrors([

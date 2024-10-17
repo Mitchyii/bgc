@@ -5,9 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TecnicoLoginController;
 use App\Http\Controllers\CalendarioController;
 
-/* Route::get('/', function () {
-    return view('welcome');
-}); */
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/', [TecnicoLoginController::class, 'showLoginForm'])->name('tecnico.login');
