@@ -1,21 +1,15 @@
 import './bootstrap';
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import interactionPlugin from '@fullcalendar/interaction';
-import '@fullcalendar/daygrid/dist/main.css';
-import '@fullcalendar/timegrid/dist/main.css';
+import '@fullcalendar/daygrid/main.css'; // Importar o CSS do FullCalendar
 
-document.addEventListener('DOMContentLoaded', function () {
-    let calendarEl = document.getElementById('calendar');
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar'); // Certifique-se de ter um div com o id 'calendar'
 
-    if (calendarEl) {
-        let calendar = new Calendar(calendarEl, {
-            plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
-            initialView: 'dayGridMonth',
-            events: '/events',  // URL para obter os eventos
-        });
+    var calendar = new Calendar(calendarEl, {
+        plugins: [dayGridPlugin],
+        initialView: 'dayGridMonth'
+    });
 
-        calendar.render();
-    }
+    calendar.render();
 });
