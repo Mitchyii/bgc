@@ -13,7 +13,7 @@ class TecnicoSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('tecnicos')->insert(
+        DB::table('tecnicos')->insert([
             [
                 'nome' => 'Bruno Cerqueira',
                 'email' => 'bruno@empresa.com',
@@ -28,6 +28,6 @@ class TecnicoSeeder extends Seeder
                 'telemovel' => '917654321',
                 'especialidade' => 'armazenamento',
             ]
-        );
+            ]);
     }
 }
