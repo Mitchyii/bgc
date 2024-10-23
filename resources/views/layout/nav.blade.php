@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <!-- Logotipo -->
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="{{ asset('/calendario') }}">
                 <img src="{{ asset('img/nav/logotipo.png') }}" alt="Logotipo BGCInformatica">
             </a>
 
@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Clientes</a>
+                        <a class="nav-link" href="{{ asset('/clientes') }}">Clientes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Equipamentos</a>
