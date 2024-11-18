@@ -13,7 +13,7 @@
 
 @section('main')
 <div class="div-logotipo">
-    <img src="{{ asset('storage/nav/logotipo2.png') }}" alt="Logotipo">
+    <img src="{{ asset('img/nav/logotipo2.png') }}" alt="Logotipo">
 </div>
 <div class="div-form">
     <form method="POST" action="{{ route('tecnico.login.submit') }}">
